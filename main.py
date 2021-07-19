@@ -1,7 +1,7 @@
 
 
 from mspresidio import anonymize
-
+import re
 text = []
 
 with open("data/news.2017.et.shuffled") as f:
@@ -14,6 +14,11 @@ text = [anonymize(t) for t in text]
 with open("anonymized.txt",'w') as f:
     f.writelines(text)
 
+def hide_names():
+    pass
+
+def hide_capital_letters():
+    pass
 
 
 def correct_mispelling():

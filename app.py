@@ -14,6 +14,8 @@ app = FastAPI()
 @app.post('/anonymize', response_model=str,tags=['anonymize'])
 def tokenize(text : str):
     anon = mspresidio.anonymize(text)
+    anon = mspresidio.hide_dates(anon, '<DATE>')
+    anon = mspresidio.hide_names(anon, '<PERSON>')
     return anon
 
 # 5. Run the API with uvicorn
