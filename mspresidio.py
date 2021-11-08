@@ -52,7 +52,7 @@ def anonymize(text):
         analyzer_results_ee.append(r)
 
     from presidio_anonymizer import AnonymizerEngine
-    from presidio_anonymizer.entities import RecognizerResult, AnonymizerConfig
+    #from presidio_anonymizer.entities import RecognizerResult, AnonymizerConfig
 
     # Initialize the engine with logger.
     engine = AnonymizerEngine()
